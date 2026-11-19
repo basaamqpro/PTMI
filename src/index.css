@@ -1,0 +1,271 @@
+/* 
+   1. Global styles
+ */
+
+* {
+  margin: 0px;
+  padding: 0px;
+  background: none;
+
+  display: flex;
+  font-family: sans-serif;
+  font-weight: 100;
+  justify-content: center;
+}
+
+style,
+script,
+title {
+  display: none;
+}
+
+#root {
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 
+   2. Body and background
+ */
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #eef4ff, #f8fbff);
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: -50px;
+  background: radial-gradient(circle at -2% -7%, #ff4e07, transparent 40%),
+    radial-gradient(circle at 88% 54%, #0600ff8a, transparent 39%),
+    radial-gradient(circle at 62% 23%, #364935, transparent 45%),
+    linear-gradient(135deg, #274391, #77440c);
+  filter: blur(35px);
+  z-index: -1;
+}
+
+.background_parent {
+  flex-direction: column;
+  background-color: white;
+  border-radius: 11px;
+  overflow: hidden;
+  align-items: center;
+  width: 80%;
+  max-width: 920px;
+}
+
+/* 
+   3. Menu and logo
+ */
+
+.Menu {
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.parentlogo {
+  align-items: center;
+}
+
+.logoheader_2column {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 22px;
+  width: 72%;
+}
+
+.Menuheader {
+  width: 100%;
+  justify-content: space-around;
+}
+
+img.logo {
+  height: 40px;
+  width: 40px;
+}
+
+/* 
+   4. Treatment records
+ */
+
+.Treatmentrecord {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  margin-top: 22px;
+}
+
+.Treatmentrecord select {
+  width: 80%;
+  height: 42px;
+  font-size: 17px;
+  margin: 35px;
+}
+
+p.second_header {
+  width: 70%;
+  text-align: center;
+}
+
+/* 
+   5. Treatment table
+ */
+
+.Table {
+  flex-direction: column;
+  width: 80%;
+}
+
+.parents_column {
+  background-color: rgb(234 239 244);
+  justify-content: center;
+  /* align-items: center; */
+  text-align: center;
+  font-size: 13px;
+  height: 60px;
+}
+
+.parents_column h3 {
+  width: 25%;
+  font-weight: bold;
+  align-items: center;
+}
+
+.TableList {
+  flex-direction: column;
+  overflow: hidden;
+  height: 359px;
+  overflow-y: scroll;
+  justify-content: flex-start;
+}
+
+.table_row p {
+  width: 25%;
+  word-wrap: anywhere;
+  border: 1px solid #393dd4;
+  min-height: 9vh;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 
+   6. Treatment form
+ */
+
+.ParentForm {
+  flex-direction: column;
+  margin-top: 42px;
+  width: 80%;
+  justify-content: center;
+  align-items: center;
+}
+
+form.Form {
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  background-color: #203b89;
+  color: white;
+  max-width: 810px;
+}
+
+input {
+  border: none;
+  border: 1px solid #b0adad;
+  border-radius: 8px;
+  width: 80%;
+  height: 25px;
+  background-color: white;
+  padding: 8px;
+  font-size: 2rem;
+}
+
+label {
+  margin: 5px;
+  margin-top: 23px;
+  font-size: 20px;
+}
+
+button {
+  font-size: 25px;
+  background-color: #424ed6;
+  border-radius: 29px;
+  width: 163px;
+  margin: 19px;
+  padding: 9px 2px;
+}
+
+/* 
+   7. Submitted treatment details
+ */
+
+.submittedBox {
+  flex-direction: column;
+  background: #100c4e;
+  width: 80%;
+  padding: 18px 0px;
+  border-radius: 13px;
+  margin: 20px;
+}
+
+.submittedBox h3 {
+  color: white;
+  font-weight: bold;
+  font-size: 28px;
+  margin: 12px;
+}
+
+.submittedBox p {
+  font-size: 20px;
+  color: white;
+  text-align: left;
+  justify-content: flex-start;
+  margin: 9px;
+}
+
+span.displayinfo {
+  font-weight: bold;
+  color: #ff1313;
+  margin: 4px;
+}
+
+/* 
+   8. Mobile portrait layout
+ */
+
+@media only screen and (orientation: portrait) {
+  .background_parent {
+    flex-direction: column;
+    background-color: white;
+    border-radius: 11px;
+    overflow: hidden;
+    align-items: center;
+    width: 100%;
+    max-width: 920px;
+  }
+
+  .Table {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  input {
+    padding: 8px;
+    font-size: 1.4rem;
+  }
+}
